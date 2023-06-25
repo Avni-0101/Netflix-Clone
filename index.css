@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 10%;
+}
+.header img {
+    cursor: pointer;
+    width: 150px;
+}
+.head {
+    width: 100%;
+    height: 700px;
+    background-image: linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.5),rgb(0,0,0,0.7)), url(images/header.jpg);
+}
+.signin, form button {
+    margin-left: 10px;
+    outline: 0;
+    border: 0;
+    background: #db0001;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.lan, form input {
+    display: inline-flex;
+    align-items: center;
+    background: #00000099;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+.lan img {
+    width: 10px;
+    margin-left: 10px;
+}
+.head .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.content h1 {
+    font-size: 50px;
+    font-weight: 800;
+    /* line-height: 70px; */
+    max-width: 750px;
+}
+.content h3 {
+    margin: 10px;
+    font-weight: 500;
+}
+.content p {
+    margin: 10px;
+}
+form button {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 2px 5px;
+}
+form button:hover, .signin:hover {
+    background-color: #b20000;
+}
+form input {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 2px 5px;
+    padding: auto;
+}
+.grey {
+    height: 7px;
+    width: 100%;
+    background: rgb(50, 50, 50);
+}
+
+/* ////////////////       featured sections       ///////////////// */
+
+.section-1 {
+    display: flex;
+    width: 100%;
+    padding: 4% 10%;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.section-1 .text {
+    flex-basis: 50%;
+    align-items: center;
+}
+.section-1 .img1 {
+    flex-basis: 50%;
+}
+.img1 img {
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+.text h1 {
+    margin: 10px;
+    font-size: 50px;
+    font-weight: 800;
+}
+.text p {
+    margin: 10px;
+    font-weight: 500;
+    font-size: 24px;
+}
+.mediaFlex{
+    flex: 1;
+    flex-direction: row;
+}
+
+/* ///////////////////// FAQs ////////////////// */
+
+.faqs {
+    width: 100%;
+    padding: 4% 10%;
+}
+.faqs .title {
+    margin: 10px;
+    font-size: 50px;
+    font-weight: 800;
+    text-align: center;
+}
+.accordian ul{
+    padding: 20px 0;
+}
+.accordian li {
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.accordian li label{
+    display: flex;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+label::after {
+    content: '+';
+    font-size: 32px;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    transition: transform 0.5s;
+}
+input[type="radio"]{
+    display: none;
+}
+.accordian .con{
+    overflow: hidden;
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    transition: max-height 0.2s, padding 0.2s;
+}
+.accordian input[type="radio"]:checked + label + .con {
+    max-height: 600px;
+    padding: 30px 20px;
+}
+.accordian input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+
+
+
+.sameHead {
+    margin: 40px 0;
+    text-align: center;
+}
+.sameHead p {
+    margin: 10px;
+}
+.sameHead form button {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 2px 5px;
+}
+.sameHead form button:hover, .signin:hover {
+    background-color: #b20000;
+}
+.sameHead form input {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 2px 5px;
+    padding: auto;
+}
+
+/* //////////////////      footer          ///////////////// */
+footer {
+    font-size: 15px;
+    width: 100%;
+    padding: 4% 10%;
+    color: #b5b5b5;
+}
+footer a {
+    text-decoration: underline;
+    margin: 8px 0;
+}
+footer .row, footer button {
+    margin: 13px 0;
+}
+
+footer .cr, footer .call {
+    margin-bottom: 13px 0;
+    padding: 13px 0;
+    font-size: 16px;
+}
+footer .row {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+/* //////////////////////     media queries      ////////////////////// */
+
+@media only screen and (max-width: 800px) {
+    .header .logo {
+        width: 100px;
+    }
+    .head button {
+        padding: 4px 8px;
+    }
+    .text, .img1 {
+        flex-basis: 100%;
+    }
+    .content h1, .section-1 h1, .faqs .title {
+        font-size: 30px;
+    }
+    form input {
+        width: 200px;
+    }
+    .text p {
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .header,.section-1, .faqs ,footer {
+        padding: 20px;
+    }
+    .head{
+        height: 550px;
+    }
+    footer .row {
+        grid-template-columns: auto;
+    }
+    .section-1 .text , .section-1 .img1 {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .mediaFlex {
+        flex-direction: column-reverse;
+    }
+}
